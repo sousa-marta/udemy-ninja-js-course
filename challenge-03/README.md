@@ -101,7 +101,3 @@ pessoa.apresentacao = function(){
 
     return sexo + ' ' + pessoa.nome + ', tenho ' + pessoa.idade + ' ' + idade
 }
-
-// Agora, apresente-se ;)
-?
-```
