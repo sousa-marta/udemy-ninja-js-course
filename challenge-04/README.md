@@ -10,9 +10,13 @@ para o contrário.
 let isTruthy = function(element){
     if(element){ 
         return true
-    } else {
-        return false
-    }
+    }         
+    return false
+}
+
+//com ternário
+let isTruthy = element => {
+    return element ? true : false
 }
 
 /*
@@ -47,7 +51,7 @@ carro.mudarCor = (cor) => carro.cor = cor
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = ()=>carro.cor
+carro.obterCor = ()=> carro.cor
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
@@ -84,7 +88,23 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+
+carro.adicionarPessoas = function(pessoas) {
+  let singularOuPlural = carro.quantidadePessoas == 1 ? 'pessoa' : 'pessoas'
+
+  if (pessoas < carro.assentos) {
+    carro.assentos -= pessoas
+    carro.quantidadePessoas += pessoas
+    return 'O carro tem ' + carro.quantidadePessoas + ' ' + singularOuPlural
+  } else if (pessoas == carro.assentos){
+    carro.assentos = 0
+    carro.quantidadePessoas += pessoas 
+    return 'Carro lotado!'
+  }
+  if (pessoas > carro.assentos) {
+    return 'Carro lotado!'
+  } 
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
