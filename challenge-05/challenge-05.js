@@ -59,7 +59,7 @@ function book (nomeLivro){
         }
     }
 
-    return !nomeLivro ? objeto : objeto[nomeLivro] //como estamos recebendo uma strig, precisa usar essa notação entre [] e não '.'
+    return nomeLivro ? objeto[nomeLivro] : objeto //como estamos recebendo uma strig, precisa usar essa notação entre [] e não '.'
 }
 
 /*
@@ -82,4 +82,5 @@ Ainda com a função acima, imprima o nome da editora de um livro qualquer, usan
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+let nomeDoLivro = 'nome3'
+'O livro ' + nomeDoLivro + ' foi publicado pela editora ' + book(nomeDoLivro).editora
