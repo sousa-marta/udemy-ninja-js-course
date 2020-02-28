@@ -60,13 +60,17 @@ indentação correta do código, para ficar dentro da IIFE.
     por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
     que foram passadas para a primeira função `calculator`.
     */
-    // ?
+    function calculator (num1, num2){
+        return function (callback){
+            return callback (num1, num2)
+        }
+    }
 
     /*
     Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
     passando dois números por parâmetro.
     */
-    // ?
+    let sum = calculator (10, 5)
 
     /*
     Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -78,7 +82,7 @@ indentação correta do código, para ficar dentro da IIFE.
     anônima tem como seus argumentos.
     */
     console.log( 'O resultado da soma é:' );
-    // ?
+    console.log(sum((number1, number2) => number1 + number2))
 
     /*
     Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
