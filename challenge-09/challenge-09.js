@@ -89,7 +89,10 @@ indentação correta do código, para ficar dentro da IIFE.
     `division` e `mod`, e atribua à elas `calculator`, passando números
     diferentes para cada chamada.
     */
-    // ?
+    let subtraction = calculator (15,3)
+    let multiplication = calculator (2,4)
+    let division = calculator (6,4)
+    let mod = calculator (29, 6)
 
     /*
     Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -99,14 +102,22 @@ indentação correta do código, para ficar dentro da IIFE.
     chamada.
     */
     console.log( 'O resultado da subtração é:' );
-    // ?
+    console.log(subtraction(function(num1,num2){
+        return num1 - num2
+    }))
 
     console.log( 'O resultado da multiplicação é:' );
-    // ?
+    console.log(multiplication(function(num1,num2){
+        return num1 * num2
+    }))
 
     console.log( 'O resultado da divisão é:' );
-    // ?
+    console.log(division(function(num1,num2){
+        return num1 / num2
+    }))
 
     console.log( 'O resto da divisão é:' );
-    // ?
+    console.log(mod(function(num1,num2){
+        return num1 % num2
+    }))
 })()
